@@ -18,7 +18,8 @@ public class TestSpring {
         // application should be closed
         context.close();
 
-         */
+
+        // todo 2 lesson
 
         //create connection to application context
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
@@ -32,6 +33,17 @@ public class TestSpring {
         musicPlayer.playMusic();
 
         // application should be closed
+        context.close();
+         */
+
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+
+        musicPlayer.playMusic();
+
         context.close();
 
     }

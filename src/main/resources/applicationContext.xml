@@ -16,4 +16,9 @@
           class="bg.myfirst.app.PopMusic">
     </bean>
 
+    <bean id="musicPlayer"
+    class="bg.myfirst.app.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
 </beans>
