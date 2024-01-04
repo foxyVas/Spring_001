@@ -12,4 +12,8 @@
         <constructor-arg value="Yana"/>
     </bean>
 
+    <bean id="musicBean"
+          class="bg.myfirst.app.PopMusic">
+    </bean>
+
 </beans>

@@ -4,7 +4,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpring {
     public static void main(String[] args) {
-
+        /*
+        // todo my first lesson
         //create connection to application context
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
@@ -16,5 +17,22 @@ public class TestSpring {
 
         // application should be closed
         context.close();
+
+         */
+
+        //create connection to application context
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        // ("Bean ID" in applicationContext.xml, class in project)
+        Music music = context.getBean("musicBean", Music.class);
+
+        MusicPlayer musicPlayer = new MusicPlayer(music);
+        musicPlayer.playMusic();
+
+        // application should be closed
+        context.close();
+
     }
 }

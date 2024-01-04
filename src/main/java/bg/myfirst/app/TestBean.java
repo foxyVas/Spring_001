@@ -1,6 +1,7 @@
 package bg.myfirst.app;
 
 public class TestBean {
+    // bean - java object
 
     private String name;
 
