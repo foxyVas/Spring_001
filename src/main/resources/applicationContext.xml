@@ -8,8 +8,8 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="testBean"
-          class="alishev.spring.demo.TestBean">
-        <constructor-arg value="Neil"/>
+          class="bg.myfirst.app.TestBean">
+        <constructor-arg value="Yana"/>
     </bean>
 
 </beans>
