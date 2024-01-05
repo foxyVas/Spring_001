@@ -95,7 +95,7 @@ public class TestSpring {
 
         System.out.println(classicalMusic.getSong());
         context.close();
-         */
+
 
         // todo 7
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
@@ -110,9 +110,17 @@ public class TestSpring {
 
         context.close();
 
+         */
+        // todo 8 - annotation @autowired
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        Computer computer = context.getBean("computer", Computer.class);
+        System.out.println(computer);
 
 
-
+        context.close();
 
 
     }
