@@ -95,8 +95,20 @@ public class TestSpring {
 
         System.out.println(classicalMusic.getSong());
         context.close();
-
          */
+
+        // todo 7
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        RockMusic rockMusic = context.getBean("rockMusic", RockMusic.class);
+        PopMusic popMusic = context.getBean("myPopMusic", PopMusic.class);
+        System.out.println(rockMusic.getSong());
+        System.out.println(popMusic.getSong());
+
+
+        context.close();
 
 
 
