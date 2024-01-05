@@ -2,6 +2,15 @@ package bg.myfirst.app;
 
 public class ClassicalMusic implements Music{
 
+    private ClassicalMusic () {
+
+    }
+
+    public static ClassicalMusic getClassicalMusic() {
+        System.out.println("Factory method - classical music");
+        return new ClassicalMusic();
+    }
+
     public void doMyInit() {
         System.out.println("Doing my initialization...");
     }

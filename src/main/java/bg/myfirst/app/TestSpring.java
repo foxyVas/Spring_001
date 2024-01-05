@@ -85,6 +85,17 @@ public class TestSpring {
         System.out.println(classicalMusic.getSong());
         context.close();
 
+        // todo 6
+
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        ClassicalMusic classicalMusic = context.getBean("musicBean1", ClassicalMusic.class);
+
+        System.out.println(classicalMusic.getSong());
+        context.close();
+
          */
 
 
