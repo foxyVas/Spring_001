@@ -34,7 +34,9 @@ public class TestSpring {
 
         // application should be closed
         context.close();
-         */
+
+
+        // todo 3 lesson
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
@@ -43,8 +45,38 @@ public class TestSpring {
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
         musicPlayer.playMusic();
+        System.out.println(musicPlayer.getName());
+        System.out.println(musicPlayer.getVolume());
+        context.close();
+
+         */
+
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+
+        boolean comparison = firstMusicPlayer == secondMusicPlayer;
+
+        System.out.println(firstMusicPlayer.getName());
+        System.out.println(firstMusicPlayer.getVolume());
+        System.out.println(comparison);
+
+        firstMusicPlayer.setVolume(30);
+        // they point to the same object, so their values always will be the same
+        System.out.println(firstMusicPlayer.getVolume());
+        System.out.println(secondMusicPlayer.getVolume());
+        // scope -> prototype (different for both objects);
+        //       -> singleton
+        System.out.println(comparison);
 
         context.close();
+
+
+
+
 
     }
 }
