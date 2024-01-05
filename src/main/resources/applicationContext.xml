@@ -15,7 +15,10 @@
     </bean>
 
     <bean id="musicBean1"
-          class="bg.myfirst.app.ClassicalMusic">
+          class="bg.myfirst.app.ClassicalMusic"
+    init-method="doMyInit"
+    destroy-method="doMyDestroy"
+    scope="prototype">
     </bean>
 
     <bean id="musicBean2"

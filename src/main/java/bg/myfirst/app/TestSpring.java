@@ -49,7 +49,7 @@ public class TestSpring {
         System.out.println(musicPlayer.getVolume());
         context.close();
 
-         */
+        // todo 4th lesson
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
@@ -73,6 +73,20 @@ public class TestSpring {
         System.out.println(comparison);
 
         context.close();
+
+        // todo 5
+
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        ClassicalMusic classicalMusic = context.getBean("musicBean1", ClassicalMusic.class);
+
+        System.out.println(classicalMusic.getSong());
+        context.close();
+
+         */
+
 
 
 
