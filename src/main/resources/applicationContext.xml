@@ -6,8 +6,45 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- Lesson from 1 till 9
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <bean id="testBean"
+          class="at.first.app.TestBean">
+        <constructor-arg value="Marat"/>
+    </bean>
+
+    <bean id="musicBeanRock"
+          class="at.first.app.RockMusic">
+    </bean>
+
+    <bean id="musicBeanPop"
+          class="at.first.app.PopMusic">
+    </bean>
+
+    <bean id="musicBeanClassic"
+          class="at.first.app.ClassicalMusic"
+            init-method="doMyInit"
+            destroy-method="doMyDestroy"
+            factory-method="getClassicalMusic">
+    </bean>
+
+    <bean id="musicPlayer"
+          class="at.first.app.MusicPlayer"
+            scope="prototype">
+        <property name="music">
+            <list value-type="at.first.app.Music">
+                <ref bean="musicBeanClassic"/>
+                <ref bean="musicBeanPop"/>
+                <ref bean="musicBeanRock"/>
+            </list>
+        </property>
+
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
+    -->
 
     <context:component-scan base-package="bg.myfirst.app" />
-
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
 </beans>

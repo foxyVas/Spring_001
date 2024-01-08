@@ -2,11 +2,17 @@ package bg.myfirst.app;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class RockMusic implements Music {
+import java.util.ArrayList;
+import java.util.List;
 
+@Component("musicBeanRock")
+public class RockMusic implements Music{
     @Override
-    public String getSong() {
-        return "I was made for loving you <333";
+    public List<String> getSong() {
+        List<String> songs = new ArrayList <>(3);
+        songs.add("1 Rock");
+        songs.add("2 Rock");
+        songs.add("3 Rock");
+        return songs;
     }
 }
